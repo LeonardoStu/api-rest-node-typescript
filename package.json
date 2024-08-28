@@ -10,11 +10,13 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "http-status-codes": "^2.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
     "@types/express": "^4.17.21",
+    "@types/http-status-codes": "^1.2.0",
     "eslint": "^9.9.1",
     "globals": "^15.9.0",
     "ts-node-dev": "^2.0.0",
