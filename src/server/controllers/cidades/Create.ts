@@ -5,7 +5,6 @@ import { Validation } from "../../shared/middlewares";
 
 interface ICidade {
   nome: string;
-  estado: string;
 }
 
 interface IFilter {
@@ -16,7 +15,6 @@ export const createValidation = Validation((getschema) => ({
   body: getschema<ICidade>(
     yup.object().shape({
       nome: yup.string().required().min(3),
-      estado: yup.string().required().min(3),
     })
   ),
   query: getschema<IFilter>(
@@ -29,5 +27,5 @@ export const createValidation = Validation((getschema) => ({
 export const create = async (req: Request<{}, {}, ICidade>, res: Response) => {
   console.log(req.body);
 
-  return res.send("Create!");
+  return res.send("create");
 };
