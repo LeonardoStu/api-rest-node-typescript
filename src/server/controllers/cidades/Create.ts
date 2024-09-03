@@ -17,15 +17,10 @@ export const createValidation = Validation((getschema) => ({
       nome: yup.string().required().min(3),
     })
   ),
-  query: getschema<IFilter>(
-    yup.object().shape({
-      filter: yup.string().required().min(3),
-    })
-  ),
 }));
 
 export const create = async (req: Request<{}, {}, ICidade>, res: Response) => {
   console.log(req.body);
 
-  return res.send("create");
+  return res.status(StatusCodes.CREATED).json(1);
 };
